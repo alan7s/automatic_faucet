@@ -19,4 +19,4 @@ while True:
         driver.switch_to.window(driver.window_handles[0])
         time.sleep(45)
     except:
-        driver.get("https://adbtc.top/surf/browse")
+        print("error")
