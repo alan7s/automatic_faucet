@@ -14,6 +14,9 @@ time.sleep(10)
 driver.get("https://adbtc.top/surf/rotator")
 time.sleep(45) #45s para resolver o hCaptcha
 while True:
-    driver.find_element_by_css_selector('.pulse.animated.valign-wrapper.btn').click()
-    driver.switch_to.window(driver.window_handles[0])
-    time.sleep(45)
+    try:
+        driver.find_element_by_css_selector('.pulse.animated.valign-wrapper.btn').click()
+        driver.switch_to.window(driver.window_handles[0])
+        time.sleep(45)
+    except:
+        driver.get("https://adbtc.top/surf/browse")
