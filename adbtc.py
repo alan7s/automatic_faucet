@@ -17,7 +17,13 @@ while True:
     try:
         driver.find_element_by_css_selector('.pulse.animated.valign-wrapper.btn').click()
         driver.switch_to.window(driver.window_handles[0])
-        time.sleep(45)
+        time.sleep(5)
+        str1=str(driver.title)
+        print(str1)
+        tempo=str1.split()
+        tempo=int(tempo[0])+10
+        #print(tempo)
+        time.sleep(tempo)
         driver.switch_to.window(driver.window_handles[1])
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
