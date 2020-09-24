@@ -11,14 +11,16 @@ senha='your_password'
 
 driver.get("https://adbtc.top/index/enter/")
 time.sleep(40) #40s for you solve hCaptcha
-driver.find_element_by_id('thefirstfield').send_keys(email)
+driver.find_element_by_id('firztfiild').send_keys(email)
 driver.find_element_by_id('password').send_keys(senha)
 driver.find_element_by_css_selector('.btn.light-blue.darken-4').click()
 time.sleep(10)
 driver.get("https://adbtc.top/index/earn") #https://adbtc.top/surf/rotator
 time.sleep(6)
 driver.find_element_by_css_selector('.btn.btn-large.yellow.black-text').click()
-time.sleep(45) #45s for you solve hCaptcha
+time.sleep(5) #captchar...
+driver.find_element_by_class_name('select-wrapper').click()
+driver.find_element_by_xpath("//ul[@class='dropdown-content select-dropdown']/li[3]").click()
 while True:
     try:
         driver.find_element_by_css_selector('.pulse.animated.valign-wrapper.btn').click()
